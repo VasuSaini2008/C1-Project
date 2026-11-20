@@ -137,27 +137,50 @@ button {
 
 /* Authentication pages */
 
+body {
+  background: #9b9593;
+}
+
 .auth-page {
-  max-width: 460px;
-  margin: 45px auto;
-  padding: 0 20px;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 24px 0;
 }
 
 .auth-card {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  border: 1px solid #ddd;
-  padding: 25px;
+  max-width: 950px;
+  padding: 10px 0;
 }
 
 .auth-card h1 {
   margin-top: 0;
+  margin-bottom: 18px;
+  font-size: clamp(2.1rem, 4vw, 3.3rem);
+  font-weight: 700;
+}
+
+.auth-card label {
+  font-size: clamp(1.6rem, 2.2vw, 2.6rem);
+  font-weight: 500;
+  margin-top: 18px;
 }
 
 .auth-card input {
-  padding: 11px;
-  border: 1px solid #aaa;
+  width: 100%;
+  min-height: 78px;
+  padding: 12px 18px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.14);
+  color: #1f1f1f;
+  font-size: clamp(1.4rem, 2vw, 2.2rem);
+}
+
+.auth-card input::placeholder {
+  color: rgba(28, 28, 28, 0.7);
 }
 
 .auth-card p {
@@ -169,7 +192,22 @@ button {
 }
 
 .primary-button {
-  margin-top: 10px;
+  margin-top: 18px;
+  min-width: 220px;
+  padding: 16px 28px;
+  border-radius: 999px;
+  border: 0;
+  background: #2e2e2e;
+  color: #fff;
+  font-weight: 700;
+}
+
+.auth-message {
+  margin: 4px 0;
+  padding: 12px 14px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.35);
+  overflow-wrap: anywhere;
 }
 
 /* C1 New Post page */
